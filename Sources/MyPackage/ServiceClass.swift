@@ -12,7 +12,7 @@ public enum HTTPMethod : String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
-//    case delete = "DELETE"
+    case delete = "DELETE"
 }
 
 public enum NetworkResponse: String , Error {
@@ -54,8 +54,8 @@ public final class ServiceClass {
                 completion(.success(data))
             case 401...500:
                 completion(.failure(.authenticationError))
-//            case 501...599:
-//                completion(.failure(.badRequest))
+            case 501...599:
+                completion(.failure(.badRequest))
             default:
                 completion(.failure(.failed))
                 
