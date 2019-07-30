@@ -25,6 +25,8 @@ public enum NetworkResponse: String , Error {
     case noResult = "NO Result"
 }
 
+
+//Public calls for service
 public final class ServiceClass {
     
     var request : URLRequest!
