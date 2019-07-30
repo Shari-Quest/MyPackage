@@ -16,11 +16,13 @@ public enum HTTPMethod : String {
     case delete = "DELETE"
 }
 
+// Response enum
 public enum NetworkResponse: String , Error {
     case success
     case authenticationError = "You need to be authenticated"
     case badRequest = "Bad Request"
     case failed = "Netwrok Request Failed"
+    case noResult = "NO Result"
 }
 
 public final class ServiceClass {
